@@ -84,7 +84,8 @@ computer_input = rand(1..20)
     end
     print_board
     puts "Score: #{@score}"
-    puts "Computer Score: #{@computer_score}"
+    puts "Computer Score: #{@computer_score}" 
+    
 
 end
 
