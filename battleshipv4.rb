@@ -22,6 +22,7 @@ def initialize_board
     end
 end
 
+#Create the board, and hide the ships unless hit.
 def print_board
     for num in @board
         print num
@@ -62,13 +63,12 @@ computer_input = rand(1..20)
         @ships[computer_input] = "X"
         puts "The Computer Player got a Hit!"
         @hits += 1
-        #@guesses += 1
+        @guesses += 1
         @computer_score += 10
     else
         puts "The Computer Player Missed!"
-        #@guesses += 1
     end
-print_board
+    print_board
     puts "What columns do you think the boats are in?"
     user_input = gets.chomp.to_i
 
@@ -82,9 +82,9 @@ print_board
         puts "Miss!"
         @guesses += 1
     end
-print_board
-puts "Score: #{@score}"
-puts "Computer Score: #{@computer_score}"
+    print_board
+    puts "Score: #{@score}"
+    puts "Computer Score: #{@computer_score}"
 
 end
 
