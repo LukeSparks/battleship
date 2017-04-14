@@ -1,8 +1,8 @@
 def initialize_board
-    @board = []
+    @board = []  # lets not make these global variables, lets instead have this method return a board. we can then pass it into print_board
     @ships = []
     for x in 1..20 do
-    @board << x
+    @board << x # indent this in since its inside the loop
     end
     
     # Use a counter and an array full of spaces to created a "Ships" line to be printed beneath board.
